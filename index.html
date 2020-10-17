@@ -3,6 +3,7 @@
     <title>Queslar Empirical Dungeoneer</title>
   </head>
   <body>
+    <div id="bugfix"></div>
     <table>
       <thead>
         <tr>
@@ -398,7 +399,7 @@
                     if(Math.random() < critChance) {
                       damage *= attacker.critMultiplier;
                     }
-                    defender.health -= Math.round((Math.round(damage) - defender.defense) * (defender.tanky > 0 ? 0.5 : 1));
+                    defender.health -= Math.max(0, Math.round((Math.round(damage) - defender.defense) * (defender.tanky > 0 ? 0.5 : 1)));
                     if(defender.health <= 0 && defenderIndex == fighter.length - 1) {
                       result.lossAverageRound += round;
                       over = true;
@@ -453,7 +454,7 @@
                     } else if(attacker.className == "mage") {
                       damage *= 0.4;
                     }
-                    defender.health -= Math.round(damage) - defender.defense;
+                    defender.health -= Math.max(0, Math.round(damage) - defender.defense);
                     if(defender.health <= 0) {
                       over = true;
                       for(defenderIndex = 0; over && defenderIndex < monster.length; ++defenderIndex) {
@@ -480,7 +481,7 @@
                       if(Math.random() < critChance) {
                         damage *= attacker.critMultiplier;
                       }
-                      defender.health -= Math.round(damage) - defender.defense;
+                      defender.health -= Math.max(0, Math.round(damage) - defender.defense);
                       if(defender.health <= 0) {
                         over = true;
                         for(defenderIndex = 0; over && defenderIndex < monster.length; ++defenderIndex) {
@@ -503,7 +504,7 @@
                       if(Math.random() < critChance) {
                         damage *= attacker.critMultiplier;
                       }
-                      defender.health -= Math.round(damage) - defender.defense;
+                      defender.health -= Math.max(0, Math.round(damage) - defender.defense);
                       if(defender.health <= 0) {
                         over = true;
                         for(defenderIndex = 0; over && defenderIndex < monster.length; ++defenderIndex) {
@@ -526,7 +527,7 @@
                         if(Math.random() < critChance) {
                           damage *= attacker.critMultiplier;
                         }
-                        defender.health -= Math.round(damage) - defender.defense;
+                        defender.health -= Math.max(0, Math.round(damage) - defender.defense);
                       }
                     }
                     if(defenderIndex % 3 == 0 && monster.length > defenderIndex + 2) {
@@ -536,7 +537,7 @@
                         if(Math.random() < critChance) {
                           damage *= attacker.critMultiplier;
                         }
-                        defender.health -= Math.round(damage) - defender.defense;
+                        defender.health -= Math.max(0, Math.round(damage) - defender.defense);
                       }
                     }
                     over = true;
@@ -660,5 +661,6 @@
       }
     }
     updateGold();
+    document.getElementById("bugfix").innerHTML = "Latest bugfix: low damage hits no longer heal monsters";
   </script>
 </html>
