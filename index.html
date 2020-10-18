@@ -1,666 +1,279 @@
 <html>
-  <head>
-    <title>Queslar Empirical Dungeoneer</title>
-  </head>
-  <body>
-    <div id="bugfix"></div>
-    <table>
-      <thead>
-        <tr>
-          <th>Class</th>
-          <th>Health</th>
-          <th>Defense</th>
-          <th>Damage</th>
-          <th>Crit</th>
-          <th>Hit</th>
-          <th>Dodge</th>
-          <th>Gold</th>
-        </tr>
-      </thead>
-      <tfoot>
-        <tr>
-          <th>Class</th>
-          <th>Health</th>
-          <th>Defense</th>
-          <th>Damage</th>
-          <th>Crit</th>
-          <th>Hit</th>
-          <th>Dodge</th>
-          <th>Gold</th>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <td>
-            <select id="fighterClass1">
-              <option value="none">---</option>
-              <option value="assassin">Assassin</option>
-              <option value="brawler">Brawler</option>
-              <option value="cavalry">Cavalry</option>
-              <option value="healer">Healer</option>
-              <option value="hunter">Hunter</option>
-              <option value="knight">Knight</option>
-              <option value="mage">Mage</option>
-              <option selected="selected" value="priest">Priest</option>
-              <option value="tank">Tank</option>
-              <option value="warrior">Warrior</option>
-              <option value="wizard">Wizard</option>
-            </select>
-          </td>
-          <td>
-            <input id="fighterHealth1" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDefense1" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDamage1" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterCrit1" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterHit1" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDodge1" type="text" value="0" />
-          </td>
-          <td id="gold1">0</td>
-        </tr>
-        <tr>
-          <td>
-            <select id="fighterClass2">
-              <option value="none">---</option>
-              <option value="assassin">Assassin</option>
-              <option value="brawler">Brawler</option>
-              <option value="cavalry">Cavalry</option>
-              <option value="healer">Healer</option>
-              <option value="hunter">Hunter</option>
-              <option selected="selected" value="knight">Knight</option>
-              <option value="mage">Mage</option>
-              <option value="priest">Priest</option>
-              <option value="tank">Tank</option>
-              <option value="warrior">Warrior</option>
-              <option value="wizard">Wizard</option>
-            </select>
-          </td>
-          <td>
-            <input id="fighterHealth2" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDefense2" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDamage2" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterCrit2" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterHit2" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDodge2" type="text" value="0" />
-          </td>
-          <td id="gold2">0</td>
-        </tr>
-        <tr>
-          <td>
-            <select id="fighterClass3">
-              <option value="none">---</option>
-              <option value="assassin">Assassin</option>
-              <option value="brawler">Brawler</option>
-              <option value="cavalry">Cavalry</option>
-              <option selected="selected" value="healer">Healer</option>
-              <option value="hunter">Hunter</option>
-              <option value="knight">Knight</option>
-              <option value="mage">Mage</option>
-              <option value="priest">Priest</option>
-              <option value="tank">Tank</option>
-              <option value="warrior">Warrior</option>
-              <option value="wizard">Wizard</option>
-            </select>
-          </td>
-          <td>
-            <input id="fighterHealth3" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDefense3" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDamage3" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterCrit3" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterHit3" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDodge3" type="text" value="0" />
-          </td>
-          <td id="gold3">0</td>
-        </tr>
-        <tr>
-          <td>
-            <select id="fighterClass4">
-              <option value="none">---</option>
-              <option value="assassin">Assassin</option>
-              <option value="brawler">Brawler</option>
-              <option value="cavalry">Cavalry</option>
-              <option value="healer">Healer</option>
-              <option value="hunter">Hunter</option>
-              <option value="knight">Knight</option>
-              <option value="mage">Mage</option>
-              <option value="priest">Priest</option>
-              <option value="tank">Tank</option>
-              <option selected="selected" value="warrior">Warrior</option>
-              <option value="wizard">Wizard</option>
-            </select>
-          </td>
-          <td>
-            <input id="fighterHealth4" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDefense4" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDamage4" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterCrit4" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterHit4" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDodge4" type="text" value="0" />
-          </td>
-          <td id="gold4">0</td>
-        </tr>
-        <tr>
-          <td>
-            <select id="fighterClass5">
-              <option value="none">---</option>
-              <option value="assassin">Assassin</option>
-              <option value="brawler">Brawler</option>
-              <option selected="selected" value="cavalry">Cavalry</option>
-              <option value="healer">Healer</option>
-              <option value="hunter">Hunter</option>
-              <option value="knight">Knight</option>
-              <option value="mage">Mage</option>
-              <option value="priest">Priest</option>
-              <option value="tank">Tank</option>
-              <option value="warrior">Warrior</option>
-              <option value="wizard">Wizard</option>
-            </select>
-          </td>
-          <td>
-            <input id="fighterHealth5" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDefense5" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDamage5" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterCrit5" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterHit5" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDodge5" type="text" value="0" />
-          </td>
-          <td id="gold5">0</td>
-        </tr>
-        <tr>
-          <td>
-            <select id="fighterClass6">
-              <option selected="selected" value="none">---</option>
-              <option value="assassin">Assassin</option>
-              <option value="brawler">Brawler</option>
-              <option value="cavalry">Cavalry</option>
-              <option value="healer">Healer</option>
-              <option value="hunter">Hunter</option>
-              <option value="knight">Knight</option>
-              <option value="mage">Mage</option>
-              <option value="priest">Priest</option>
-              <option value="tank">Tank</option>
-              <option value="warrior">Warrior</option>
-              <option value="wizard">Wizard</option>
-            </select>
-          </td>
-          <td>
-            <input id="fighterHealth6" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDefense6" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDamage6" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterCrit6" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterHit6" type="text" value="0" />
-          </td>
-          <td>
-            <input id="fighterDodge6" type="text" value="0" />
-          </td>
-          <td id="gold6">0</td>
-        </tr>
-      </tbody>
-    </table>
-    <fieldset>
-      <legend>Gold invested</legend>
-      <div id="goldLevels">Levels: 0</div>
-      <div id="goldFighters">Fighters: 111100000</div>
-      <div id="goldTotal">Total: 111100000</div>
-    </fieldset>
-    <fieldset>
-      <legend>Simulation</legend>
-      <div><label>Dungeon: </label><input id="simulationDungeon" type="text" value="400" /></div>
-      <div><label>Battles: </label><input id="simulationBattles" type="text" value="10000" /></div>
-      <div id="simulationButton" onclick="simulationToggle()" style="background-color:#00aa00;height:30px;width:100px;">Start</div>
-      <div id="simulationResult"></div>
-    </fieldset>
-  </body>
-  <script type="text/javascript">
-    function dungeon(level) {
-      let monster = [];
-      while(monster.length < 6 && monster.length * 50 <= level) {
-        let monsterLevel = level - 25 * monster.length;
-        monster[monster.length] = {
-          monster: true,
-          health: 0,
-          healthMax: Math.floor(100 + 400 * monsterLevel),
-          defense: Math.floor(20 + 10 * monsterLevel),
-          damage: Math.floor(60 + 40 * monsterLevel),
-          critMultiplier: 1 + 0.0025 * monsterLevel,
-          hit: Math.floor(50 + 30 * monsterLevel),
-          dodge: Math.floor(50 + 30 * monsterLevel),
-        };
-      }
-      return monster;
-    }
 
-    function readInput() {
-      let classes = {};
-      let fighter = [];
-      let classBonus = 1;
-      for(let index = 1; index <= 6; ++index) {
-        let newClass = document.getElementById("fighterClass" + index).value;
-        if(newClass != "none") {
-          if(!classes[newClass]) {
-            classBonus += 0.25;
-            classes[newClass] = true;
-          }
-        }
-      }
-      for(let index = 1; index <= 6; ++index) {
-        if(document.getElementById("fighterClass" + index).value != "none") {
-          fighter[fighter.length] = {
-            className: document.getElementById("fighterClass" + index).value,
-            health: 0,
-            healthMax: Math.floor((500 + 100 * parseInt(document.getElementById("fighterHealth" + index).value)) * classBonus),
-            defense: Math.floor((25 + 10 * parseInt(document.getElementById("fighterDefense" + index).value)) * classBonus),
-            damage: Math.floor((100 + 25 * parseInt(document.getElementById("fighterDamage" + index).value)) * classBonus),
-            critMultiplier: 1 + 0.0025 * parseInt(document.getElementById("fighterCrit" + index).value) * classBonus,
-            hit: Math.floor((50 + 50 * parseInt(document.getElementById("fighterHit" + index).value)) * classBonus) * (document.getElementById("fighterClass" + index).value == "cavalry" ? 2 : 1),
-            dodge: Math.floor((50 + 50 * parseInt(document.getElementById("fighterDodge" + index).value)) * classBonus),
-          };
-        }
-      }
-      return fighter;
-    }
+<head>
+  <title>Queslar Empirical Dungeoneer</title>
+</head>
 
-    function simulationCrunch(monster, fighter, maxCounter) {
-      let attacker;
-      let critChance = 0.1;
-      let damage;
-      let defender;
-      let defenderIndex;
-      let dummyHealTarget = {
-        health: 1,
-        healthMax: 1,
-      };
-      let index;
-      let over = false;
-      let lowestPercentHealth;
-      let queue = [];
-      let result = {
-        battles: maxCounter,
-        loss150: 0,
-        lossAverageRound: 0,
-        wins: 0,
-        winAverageRound: 0,
-      };
-      let round;
-      for(index in fighter) {
-        queue[queue.length] = fighter[index];
-      }
-      for(index in monster) {
-        queue[queue.length] = monster[index];
-      }
-      for(index = 0; index < queue.length - 1; ++index) {
-        defender = queue[index];
-        defenderIndex = index;
-        for(attacker = index + 1; attacker < queue.length; ++attacker) {
-          if(queue[attacker].hit > defender.hit) {
-            defender = queue[attacker];
-            defenderIndex = attacker;
-          }
-        }
-        attacker = queue[index];
-        queue[index] = defender;
-        queue[defenderIndex] = attacker;
-      }
-      for(let counter = maxCounter; counter > 0; --counter) {
-        for(index in fighter) {
-          fighter.tanky = 0;
-        }
-        for(index in monster) {
-          monster[index].stunned = 0;
-        }
-        for(index in queue) {
-          queue[index].health = queue[index].healthMax;
-        }
-        over = false;
-        for(round = 1; !over && round < 150; ++round) {
-          for(index in fighter) {
-            if(fighter[index].health <= 0 && fighter[index].className == "priest" && Math.random() < 0.1) {
-              fighter[index].health = fighter[index].healthMax;
-            } else if(fighter[index].tanky > 0) {
-              --fighter[index].tanky;
-            }
-          }
-          for(index in queue) {
-            attacker = queue[index];
-            if(attacker.health > 0) {
-              if(attacker.monster) {
-                if(attacker.stunned) {
-                  --attacker.stunned;
-                } else {
-                  defender = fighter[0];
-                  defenderIndex = 0;
-                  while(defender.health <= 0) {
-                    ++defenderIndex;
-                    defender = fighter[defenderIndex];
-                  }
-                  if((defender.className != "knight" || Math.random() >= 0.4)
-                      && Math.random() < attacker.hit / (attacker.hit + defender.dodge)) {
-                    if(defender.className == "tank" && Math.random() < 0.15) {
-                      defender.tanky = 3;
-                    }
-                    damage = attacker.damage;
-                    if(Math.random() < critChance) {
-                      damage *= attacker.critMultiplier;
-                    }
-                    defender.health -= Math.max(0, Math.round((Math.round(damage) - defender.defense) * (defender.tanky > 0 ? 0.5 : 1)));
-                    if(defender.health <= 0 && defenderIndex == fighter.length - 1) {
-                      result.lossAverageRound += round;
-                      over = true;
-                      break;
-                    }
-                  }
-                }
-              } else if(attacker.className != "knight") {
-                if(attacker.className == "healer") {
-                  damage = Math.floor(attacker.damage * 0.75);
-                  if(Math.random() < critChance) {
-                    damage *= attacker.critMultiplier;
-                  }
-                  defender = dummyHealTarget;
-                  lowestPercentHealth = 1;
-                  for(defenderIndex = 0; defenderIndex < fighter.length; ++defenderIndex) {
-                    if(fighter[defenderIndex].health > 0 && fighter[defenderIndex].health / fighter[defenderIndex].healthMax < lowestPercentHealth) {
-                      defender = fighter[defenderIndex];
-                      lowestPercentHealth = defender.health / defender.healthMax;
-                    }
-                  }
-                  defender.health += Math.floor(damage);
-                  if(defender.health > defender.healthMax) {
-                    defender.health = defender.healthMax;
-                  }
-                } else {
-                  if(attacker.className == "assassin" && monster.length > 3) {
-                    defender = monster[3];
-                    defenderIndex = 3;
-                    while(defender.health <= 0) {
-                      ++defenderIndex;
-                      if(defenderIndex >= monster.length) {
-                        defenderIndex = 0;
-                      }
-                      defender = monster[defenderIndex];
-                    }
-                  } else {
-                    defender = monster[0];
-                    defenderIndex = 0;
-                    while(defender.health <= 0) {
-                      ++defenderIndex;
-                      defender = monster[defenderIndex];
-                    }
-                  }
-                  if(Math.random() < attacker.hit / (attacker.hit + defender.dodge)) {
-                    damage = attacker.damage;
-                    if(Math.random() < critChance) {
-                      damage *= attacker.critMultiplier;
-                    }
-                    if(attacker.className == "hunter") {
-                      damage *= 0.6;
-                    } else if(attacker.className == "mage") {
-                      damage *= 0.4;
-                    }
-                    defender.health -= Math.max(0, Math.round(damage) - defender.defense);
-                    if(defender.health <= 0) {
-                      over = true;
-                      for(defenderIndex = 0; over && defenderIndex < monster.length; ++defenderIndex) {
-                        if(monster[defenderIndex].health > 0) {
-                          over = false;
-                        }
-                      }
-                      if(over) {
-                        ++result.wins;
-                        result.winAverageRound += round;
-                      }
-                      break;
-                    } else if(attacker.className == "warrior" && Math.random < 0.1) {
-                      defender.stunned = 2;
-                    }
-                  }
-                  if(attacker.className == "brawler" && Math.random < 0.15) {
-                    if(defender.health <= 0) {
-                      ++defenderIndex;
-                      defender = monster[defenderIndex];
-                    }
-                    if(Math.random() < attacker.hit / (attacker.hit + defender.dodge)) {
-                      damage = attacker.damage;
-                      if(Math.random() < critChance) {
-                        damage *= attacker.critMultiplier;
-                      }
-                      defender.health -= Math.max(0, Math.round(damage) - defender.defense);
-                      if(defender.health <= 0) {
-                        over = true;
-                        for(defenderIndex = 0; over && defenderIndex < monster.length; ++defenderIndex) {
-                          if(monster[defenderIndex].health > 0) {
-                            over = false;
-                          }
-                        }
-                        if(over) {
-                          ++result.wins;
-                          result.winAverageRound += round;
-                        }
-                        break;
-                      }
-                    }
-                  } else if(attacker.className == "hunter" && defenderIndex + 3 < monster.length) {
-                    defenderIndex += 3;
-                    defender = monster[defenderIndex];
-                    if(defender.health > 0 && Math.random() < attacker.hit / (attacker.hit + defender.dodge)) {
-                      damage = attacker.damage * 0.6;
-                      if(Math.random() < critChance) {
-                        damage *= attacker.critMultiplier;
-                      }
-                      defender.health -= Math.max(0, Math.round(damage) - defender.defense);
-                      if(defender.health <= 0) {
-                        over = true;
-                        for(defenderIndex = 0; over && defenderIndex < monster.length; ++defenderIndex) {
-                          if(monster[defenderIndex].health > 0) {
-                            over = false;
-                          }
-                        }
-                        if(over) {
-                          ++result.wins;
-                          result.winAverageRound += round;
-                        }
-                        break;
-                      }
-                    }
-                  } else if(attacker.className == "mage") {
-                    if(defenderIndex % 3 < 2 && monster.length > defenderIndex + 1) {
-                      defender = monster[defenderIndex + 1];
-                      if(defender.health > 0 && Math.random() < attacker.hit / (attacker.hit + defender.dodge)) {
-                        damage = attacker.damage * 0.4;
-                        if(Math.random() < critChance) {
-                          damage *= attacker.critMultiplier;
-                        }
-                        defender.health -= Math.max(0, Math.round(damage) - defender.defense);
-                      }
-                    }
-                    if(defenderIndex % 3 == 0 && monster.length > defenderIndex + 2) {
-                      defender = monster[defenderIndex + 2];
-                      if(defender.health > 0 && Math.random() < attacker.hit / (attacker.hit + defender.dodge)) {
-                        damage = attacker.damage * 0.4;
-                        if(Math.random() < critChance) {
-                          damage *= attacker.critMultiplier;
-                        }
-                        defender.health -= Math.max(0, Math.round(damage) - defender.defense);
-                      }
-                    }
-                    over = true;
-                    for(defenderIndex = 0; over && defenderIndex < monster.length; ++defenderIndex) {
-                      if(monster[defenderIndex].health > 0) {
-                        over = false;
-                      }
-                    }
-                    if(over) {
-                      ++result.wins;
-                      result.winAverageRound += round;
-                      break;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        if(!over) {
-          ++result.loss150;
-          result.lossAverageRound += 150;
-        }
-      }
-      if(result.lossAverageRound > 0) {
-        result.lossAverageRound /= result.battles - result.wins;
-      }
-      if(result.winAverageRound > 0) {
-        result.winAverageRound /= result.wins;
-      }
-      return result;
-    }
+<body>
+  <div id="bugfix"></div>
+  <span style="display: inline;">
+    <input id="apikey" type="text" value="" placeholder="API Key" maxlength="64" size="64" />
+    <button id="fetchapi" onclick="fetchApi()" type="button">Load</button>
+  </span>
+  <table>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Health</th>
+        <th>Defense</th>
+        <th>Damage</th>
+        <th>Crit</th>
+        <th>Hit</th>
+        <th>Dodge</th>
+        <th>Gold</th>
+      </tr>
+    </thead>
+    <tfoot>
+      <tr>
+        <th>Class</th>
+        <th>Health</th>
+        <th>Defense</th>
+        <th>Damage</th>
+        <th>Crit</th>
+        <th>Hit</th>
+        <th>Dodge</th>
+        <th>Gold</th>
+      </tr>
+    </tfoot>
+    <tbody>
+      <tr>
+        <td>
+          <select id="fighterClass1">
+            <option value="none">---</option>
+            <option value="assassin">Assassin</option>
+            <option value="brawler">Brawler</option>
+            <option value="cavalry">Cavalry</option>
+            <option value="healer">Healer</option>
+            <option value="hunter">Hunter</option>
+            <option value="knight">Knight</option>
+            <option value="mage">Mage</option>
+            <option selected="selected" value="priest">Priest</option>
+            <option value="tank">Tank</option>
+            <option value="warrior">Warrior</option>
+            <option value="wizard">Wizard</option>
+          </select>
+        </td>
+        <td>
+          <input id="fighterHealth1" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDefense1" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDamage1" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterCrit1" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterHit1" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDodge1" type="text" value="0" />
+        </td>
+        <td id="gold1">0</td>
+      </tr>
+      <tr>
+        <td>
+          <select id="fighterClass2">
+            <option value="none">---</option>
+            <option value="assassin">Assassin</option>
+            <option value="brawler">Brawler</option>
+            <option value="cavalry">Cavalry</option>
+            <option value="healer">Healer</option>
+            <option value="hunter">Hunter</option>
+            <option selected="selected" value="knight">Knight</option>
+            <option value="mage">Mage</option>
+            <option value="priest">Priest</option>
+            <option value="tank">Tank</option>
+            <option value="warrior">Warrior</option>
+            <option value="wizard">Wizard</option>
+          </select>
+        </td>
+        <td>
+          <input id="fighterHealth2" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDefense2" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDamage2" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterCrit2" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterHit2" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDodge2" type="text" value="0" />
+        </td>
+        <td id="gold2">0</td>
+      </tr>
+      <tr>
+        <td>
+          <select id="fighterClass3">
+            <option value="none">---</option>
+            <option value="assassin">Assassin</option>
+            <option value="brawler">Brawler</option>
+            <option value="cavalry">Cavalry</option>
+            <option selected="selected" value="healer">Healer</option>
+            <option value="hunter">Hunter</option>
+            <option value="knight">Knight</option>
+            <option value="mage">Mage</option>
+            <option value="priest">Priest</option>
+            <option value="tank">Tank</option>
+            <option value="warrior">Warrior</option>
+            <option value="wizard">Wizard</option>
+          </select>
+        </td>
+        <td>
+          <input id="fighterHealth3" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDefense3" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDamage3" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterCrit3" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterHit3" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDodge3" type="text" value="0" />
+        </td>
+        <td id="gold3">0</td>
+      </tr>
+      <tr>
+        <td>
+          <select id="fighterClass4">
+            <option value="none">---</option>
+            <option value="assassin">Assassin</option>
+            <option value="brawler">Brawler</option>
+            <option value="cavalry">Cavalry</option>
+            <option value="healer">Healer</option>
+            <option value="hunter">Hunter</option>
+            <option value="knight">Knight</option>
+            <option value="mage">Mage</option>
+            <option value="priest">Priest</option>
+            <option value="tank">Tank</option>
+            <option selected="selected" value="warrior">Warrior</option>
+            <option value="wizard">Wizard</option>
+          </select>
+        </td>
+        <td>
+          <input id="fighterHealth4" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDefense4" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDamage4" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterCrit4" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterHit4" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDodge4" type="text" value="0" />
+        </td>
+        <td id="gold4">0</td>
+      </tr>
+      <tr>
+        <td>
+          <select id="fighterClass5">
+            <option value="none">---</option>
+            <option value="assassin">Assassin</option>
+            <option value="brawler">Brawler</option>
+            <option selected="selected" value="cavalry">Cavalry</option>
+            <option value="healer">Healer</option>
+            <option value="hunter">Hunter</option>
+            <option value="knight">Knight</option>
+            <option value="mage">Mage</option>
+            <option value="priest">Priest</option>
+            <option value="tank">Tank</option>
+            <option value="warrior">Warrior</option>
+            <option value="wizard">Wizard</option>
+          </select>
+        </td>
+        <td>
+          <input id="fighterHealth5" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDefense5" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDamage5" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterCrit5" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterHit5" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDodge5" type="text" value="0" />
+        </td>
+        <td id="gold5">0</td>
+      </tr>
+      <tr>
+        <td>
+          <select id="fighterClass6">
+            <option selected="selected" value="none">---</option>
+            <option value="assassin">Assassin</option>
+            <option value="brawler">Brawler</option>
+            <option value="cavalry">Cavalry</option>
+            <option value="healer">Healer</option>
+            <option value="hunter">Hunter</option>
+            <option value="knight">Knight</option>
+            <option value="mage">Mage</option>
+            <option value="priest">Priest</option>
+            <option value="tank">Tank</option>
+            <option value="warrior">Warrior</option>
+            <option value="wizard">Wizard</option>
+          </select>
+        </td>
+        <td>
+          <input id="fighterHealth6" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDefense6" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDamage6" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterCrit6" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterHit6" type="text" value="0" />
+        </td>
+        <td>
+          <input id="fighterDodge6" type="text" value="0" />
+        </td>
+        <td id="gold6">0</td>
+      </tr>
+    </tbody>
+  </table>
+  <fieldset>
+    <legend>Gold invested</legend>
+    <div id="goldLevels">Levels: 0</div>
+    <div id="goldFighters">Fighters: 111100000</div>
+    <div id="goldTotal">Total: 111100000</div>
+  </fieldset>
+  <fieldset>
+    <legend>Simulation</legend>
+    <div><label>Dungeon: </label><input id="simulationDungeon" type="text" value="400" /></div>
+    <div><label>Battles: </label><input id="simulationBattles" type="text" value="10000" /></div>
+    <div id="simulationButton" onclick="simulationToggle()"><button type="button">Start</button></div>
+    <div id="simulationResult"></div>
+  </fieldset>
+</body>
+<script type="text/javascript" src="qed.js"></script>
 
-    function simulationLoop() {
-      let chunkSize = simulation.battles - simulation.result.battles;
-      if(chunkSize > simulation.step) {
-        chunkSize = simulation.step;
-      }
-      let chunk = simulationCrunch(simulation.dungeon, simulation.fighters, chunkSize);
-      simulation.result.loss150 += chunk.loss150;
-      simulation.result.lossAverageRound = simulation.result.lossAverageRound * (simulation.result.battles - simulation.result.wins) + chunk.lossAverageRound * (chunk.battles - chunk.wins);
-      simulation.result.winAverageRound = simulation.result.winAverageRound * simulation.result.wins + chunk.winAverageRound * chunk.wins;
-      simulation.result.battles += chunk.battles;
-      simulation.result.wins += chunk.wins;
-      if(simulation.result.lossAverageRound > 0) {
-        simulation.result.lossAverageRound /= simulation.result.battles - simulation.result.wins;
-      }
-      if(simulation.result.winAverageRound > 0) {
-        simulation.result.winAverageRound /= simulation.result.wins;
-      }
-      document.getElementById("simulationResult").innerHTML =
-          simulation.result.battles + "/" + simulation.battles + "<br />"
-          + "Win rate: " + parseFloat(100 * simulation.result.wins / simulation.result.battles).toFixed(2) + "%<br />"
-          + "Average win round: " + parseFloat(simulation.result.winAverageRound).toFixed(1) + "<br />"
-          + "Average loss round: " + parseFloat(simulation.result.lossAverageRound).toFixed(1) + "<br />"
-          + "Round 150 auto losses: " + simulation.result.loss150;
-      if(simulation.active) {
-        if(simulation.result.battles < simulation.battles) {
-          setTimeout(simulationLoop);
-        } else {
-          simulationToggle(true);
-        }
-      }
-    }
-
-    function simulationToggle(off) {
-      if(simulation.active || off) {
-        simulation.active = false;
-        document.getElementById("simulationButton").innerHTML = "Start";
-        document.getElementById("simulationButton").style.backgroundColor = "#00aa00";
-      } else {
-        document.getElementById("simulationButton").innerHTML = "Stop";
-        document.getElementById("simulationButton").style.backgroundColor = "#aa0000";
-        simulation.active = true;
-        simulation.battles = parseInt(document.getElementById("simulationBattles").value);
-        simulation.dungeon = dungeon(parseInt(document.getElementById("simulationDungeon").value));
-        simulation.fighters = readInput();
-        simulation.result = {
-          battles: 0,
-          loss150: 0,
-          lossAverageRound: 0,
-          wins: 0,
-          winAverageRound: 0,
-        };
-        setTimeout(simulationLoop);
-      }
-    }
-
-    function updateGold() {
-      let fightersBought = 0;
-      let totalGold = 0;
-      for(let index = 1, partialIds = ["Health", "Defense", "Damage", "Crit", "Hit", "Dodge"]; index <= 6; ++index) {
-        let gold = 0;
-        if(document.getElementById("fighterClass" + index).value != "none") {
-          ++fightersBought;
-          for(let partial of partialIds) {
-            let level = parseInt(document.getElementById("fighter" + partial + index).value);
-            gold += level * (level + 1) * 5000;
-          }
-        }
-        document.getElementById("gold" + index).innerHTML = gold;
-        totalGold += gold;
-      }
-      document.getElementById("goldLevels").innerHTML = "Levels: " + totalGold;
-      let fightersGold = 0;
-      for(let cost = 100000; fightersBought > 1; --fightersBought) {
-        fightersGold += cost;
-        cost *= 10;
-      }
-      document.getElementById("goldFighters").innerHTML = "Fighters: " + fightersGold;
-      document.getElementById("goldTotal").innerHTML = "Total: " + (totalGold + fightersGold);
-    }
-
-    let simulation = {
-      active: false,
-      step: 100,
-    };
-    for(let index = 1, partialIds = ["Class", "Health", "Defense", "Damage", "Crit", "Hit", "Dodge"]; index <= 6; ++index) {
-      for(let partial of partialIds) {
-        document.getElementById("fighter" + partial + index).onchange = updateGold;
-      }
-    }
-    updateGold();
-    document.getElementById("bugfix").innerHTML = "Latest bugfix: low damage hits no longer heal monsters";
-  </script>
 </html>
