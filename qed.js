@@ -13,7 +13,6 @@ function fetchApi() {
     request.onload = function () {
         var data = JSON.parse(this.response);
         window.data = data;
-        console.log("data", data);
         for (var i = 1; i < 7; i++) {
             document.getElementById("fighterHealth" + i).value = 0;
             document.getElementById("fighterDefense" + i).value = 0;
@@ -28,7 +27,6 @@ function fetchApi() {
 
         });
         data.fighters.forEach((fighter) => {
-            console.log("fighter", fighter);
             var fighterN = fighterMap.get(fighter.column_placement.toString() + "," + fighter.row_placement.toString());
             var fighterId = "fighterClass" + fighterN;
             document.getElementById("fighterHealth" + fighterN).value = fighter.health;
@@ -39,24 +37,39 @@ function fetchApi() {
             document.getElementById("fighterDodge" + fighterN).value = fighter.dodge;
             document.getElementById(fighterId).value = fighter.class;
         });
+        document.getElementById("simulationDungeon").value = data.playerFighterData.dungeon_level + 1;
         updateGold();
     }
     request.send();
+}
+
+function monsterMulti(level) {
+    var multi = level;
+    var i = Math.floor(Math.max(0, level - 400) / 200);
+    var tier = 0
+    while (i > 0) {
+        i--;
+        tier = 600 + (i * 200);
+        multi += level - tier;
+    }
+    return multi;
 }
 
 function dungeon(level) {
     let monster = [];
     while (monster.length < 6 && monster.length * 50 <= level) {
         let monsterLevel = level - 25 * monster.length;
+        var multi = monsterMulti(monsterLevel);
         monster[monster.length] = {
             monster: true,
+            level: monsterLevel,
             health: 0,
-            healthMax: Math.floor(100 + 400 * monsterLevel),
-            defense: Math.floor(20 + 10 * monsterLevel),
-            damage: Math.floor(60 + 40 * monsterLevel),
-            critMultiplier: 1 + 0.0025 * monsterLevel,
-            hit: Math.floor(50 + 30 * monsterLevel),
-            dodge: Math.floor(50 + 30 * monsterLevel),
+            healthMax: Math.floor(100 + 400 * multi),
+            defense: Math.floor(20 + 10 * multi),
+            damage: Math.floor(60 + 40 * multi),
+            critMultiplier: 1 + 0.0025 * multi,
+            hit: Math.floor(50 + 30 * multi),
+            dodge: Math.floor(50 + 30 * multi),
         };
     }
     return monster;
@@ -91,7 +104,6 @@ function readInput() {
     }
     return fighter;
 }
-
 function simulationCrunch(monster, fighter, maxCounter) {
     let attacker;
     let critChance = 0.1;
